@@ -1,0 +1,298 @@
+
+body {
+	background-color: black;
+}
+
+/* navbar */
+.bg-dark {
+	background:transparent !important;
+	transition:0.75s ease;
+}
+.bg-dark.scrolled {
+	background:#000 !important;
+	opacity: 0.9 !important ;
+}
+.navbar-brand {
+	font-family: 'Viga', sans-serif;
+	font-size: 23px;
+	color: white;
+	text-shadow: 1px 1px 1px;
+}
+.nav-link {
+	margin-right: 30px; 
+	text-transform: uppercase;
+	color: white;
+	opacity: 1;
+}
+.nav-item .garisbawah:hover {
+	border-bottom: 1px solid white;
+}
+.dropdown-item:hover {
+	background-color:#171717;
+}
+/* home */
+.home .carousel-item{
+	min-height: 100vh;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	z-index: 1;
+}
+.home .carousel-item:before{
+	content: '';
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	z-index: -1;
+}
+.home .carousel-item .container{
+	position: absolute;
+	left: 50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+.home .carousel-item h2{
+	font-size: 80px;
+	color: #ffffff;
+	margin:0 0 10px;
+	opacity: 0;
+}
+.home .carousel-item p{
+	font-size: 30px;
+	margin:0;
+	color: #eeeeee;
+	opacity:0;
+}
+.home .carousel-item .btn {
+    font-size:20px;
+    border-radius: 50px;
+    margin-top: 20px;
+    opacity: 0;
+}
+.home .carousel-item.active h2{
+	animation: fadeInLeft 0.5s ease forwards;
+}
+.home .carousel-item.active p{
+	animation: fadeInRight 0.5s ease forwards;
+}
+.home .carousel-item.active .btn{
+    animation: fadeInLeft 0.5s ease forwards;
+}
+@keyframes fadeInLeft{
+	0%{
+		opacity: 0;
+		transform: translateX(-30px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+@keyframes fadeInRight{
+	0%{
+		opacity: 0;
+		transform: translateX(30px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+.home .carousel-controls{
+	position: absolute;
+	left: 50%;
+	bottom: 40px;
+	z-index: 10;
+	transform: translateX(-50%);
+}
+
+.home .carousel-indicators{
+	position: relative;
+	margin:0;
+}
+.home .carousel-indicators li{
+	height: 70px;
+	width: 70px;
+	margin:0 5px;
+	border-radius: 50%;
+	background-position: center;
+	background-size: cover;
+	border:3px solid transparent;
+	transition: all 0.3s ease;
+}
+.home .carousel-indicators li.active{
+	border-color: #ffffff;
+	transform: scale(1.2);
+}
+.home .carousel-control-next, 
+.home .carousel-control-prev{
+	height: 60px;
+	width: 60px;
+	opacity: 1;
+	z-index: 3;
+	top: 50%;
+	transform: translateY(-50%);
+	border-radius: 50%;
+	transition: all 0.3s ease;
+}
+.home .carousel-control-next:hover, 
+.home .carousel-control-prev:hover{
+   box-shadow: 0 0 10px #ffffff;
+}
+.home .carousel-control-next img, 
+.home .carousel-control-prev img{
+   width: 30px;
+}
+.home .carousel-control-next{
+	right: -90px;
+}
+.home .carousel-control-prev{
+	left: -90px;
+}
+
+
+/* about */
+.about {
+	height: 620px;
+	background-color:#121212;
+    padding-top: 60px;
+	color: white;
+}
+.about hr {
+    width: 150px;
+    border-color: white;
+    border-width: 1px;
+    padding-bottom: 50px;
+}
+.about img {
+    width: 250px;
+}
+.about ul li {
+	display: inline-block;
+	list-style: none;
+}
+.about .see-more {
+    font-size: 14px;
+	border-radius: 30px;
+}
+.about .biografi {
+    font-size: 14px;
+	border-radius: 30px;
+	margin-left: 15px;
+}
+
+/* blog */
+.blog {
+    padding-top: 12px;
+}
+.blog hr {
+    width: 165px;
+    border-color: white;
+    border-width: 3px;
+}
+
+/* games */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text:wght@500&display=swapfamily=Goldman&display=swap');
+.games {
+	height: 300px;
+	width: 1366;
+	margin-top: 50px;
+	background-image: url(../img/games.jpg);
+	background-size: cover;
+	opacity: 0.875;
+	background-position-y: -50px;
+}
+.games h3 {
+	font-family: 'Big Shoulders Inline Text', cursive;
+	padding-top: 30px;
+	color: white;
+	font-size: 60px;
+}
+.games a {
+	font-family: 'Goldman', cursive;
+	margin-top: 20px;
+	border-radius: 30px;
+}
+
+/* contact */
+.contact {
+	padding-top: 5px;
+	padding-bottom: 50px;
+}
+.contact hr {
+	width: 150px;
+	border: 1px solid white;
+}
+.contact .card-body ul {
+	margin-left: -31px;
+}
+.contact .card-body ul li {
+	display: inline-block;
+	list-style: none;
+	margin-right: 15px;
+	margin-top: 3px;
+}
+.contact .btn {
+	margin-top: 15px;
+}
+
+/* footer */
+footer {
+    min-height: 50px;
+	padding-top:12px;
+	color: white;
+	text-align: center;
+}
+.footer i {
+	color: red;
+}
+
+
+
+
+/*responsive*/
+@media(max-width: 767px){
+	.nav-link {
+		text-transform: none;
+	}
+	.nav-item .garisbawah:hover {
+		border-bottom: none;
+	}
+	.dropdown-menu {
+		background: transparent !important;
+	}
+    .home .carousel-control-next, 
+    .home .carousel-control-prev{
+        display: none;
+    }
+    .home .carousel-indicators li{
+        height: 60px;
+        width: 60px;
+    }
+    .home .carousel-item h2{
+        font-size: 45px;
+    }
+    .home .carousel-item p{
+        font-size: 22px;
+	}
+	.about {
+		height: 700px;
+		padding-top: 50px;
+	}
+    .about hr {
+		padding-bottom: 20px;
+    }
+    .about .tulisan {
+        padding-top: 30px;
+	}
+	.about .titik {
+		padding-bottom: -120px;
+	}
+	.games {
+		height: 350px;
+	}
+}
